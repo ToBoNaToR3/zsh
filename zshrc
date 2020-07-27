@@ -35,6 +35,11 @@ alias untar='tar xvzf'
 alias backup='sudo tar -cvpzf'
 alias backupr='sudo tar --same-owner -xpvzf'
 
+alias dsp='docker system prune'
+alias dspa='docker system prune --all'
+alias dvp='docker volume prune'
+alias ds='docker stats'
+
 # Load the theme.
 #antigen theme robbyrussell
 antigen theme agnoster
