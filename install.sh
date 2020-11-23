@@ -1,3 +1,4 @@
+sudo apt install zsh
 ln -s ~/zsh/zshrc ~/.zshrc
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > ~/.antigen.zsh
 if [ "$(which zsh)" = "$SHELL" ];
