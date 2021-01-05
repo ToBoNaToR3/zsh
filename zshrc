@@ -37,8 +37,8 @@ alias backupr='sudo tar --same-owner -xpvzf'
 
 alias dsp='docker system prune'
 alias dspa='docker system prune --all'
-alias dvp='docker volume prune'
 alias ds='docker stats'
+alias dshell='docker exec -it'
 
 # Load the theme.
 #antigen theme robbyrussell
