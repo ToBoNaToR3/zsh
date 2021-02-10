@@ -30,6 +30,7 @@ alias up='uptime'
 alias zombie='ps aux | grep 'Z''
 alias ports='sudo netstat -tulpn'
 alias reload='src'
+alias python='python3'
 
 alias untar='tar xvzf'
 alias backup='sudo tar -cvpzf'
