@@ -31,6 +31,7 @@ alias zombie='ps aux | grep 'Z''
 alias ports='sudo netstat -tulpn'
 alias reload='src'
 alias python='python3'
+alias pip='pip3'
 
 alias untar='tar xvzf'
 alias backup='sudo tar -cvpzf'
