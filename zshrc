@@ -15,7 +15,6 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle zsh_reload
 antigen bundle zsh-navigation-tools
-antigen bundle zsh-interactive-cd
 antigen bundle colored-man-pages
 antigen bundle colorize
 antigen bundle command-not-found
