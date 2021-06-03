@@ -9,8 +9,6 @@ antigen bundle pip
 antigen bundle sudo
 antigen bundle ufw
 antigen bundle cp
-antigen bundle copyfile
-antigen bundle copydir
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle zsh_reload
