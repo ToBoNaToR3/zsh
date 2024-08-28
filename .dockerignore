@@ -1,0 +1,7 @@
+.commitlintrc
+.dockerignore
+.gitignore
+.gitlab-ci.yml
+Dockerfile
+README.md
+renovate.json

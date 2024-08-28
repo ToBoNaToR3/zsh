@@ -1,0 +1,24 @@
+min_version = "2025.12.5"
+
+[settings]
+pipx.uvx = true
+npm.bun = true
+
+[tools]
+# Dependencies for mise
+usage = "2.11.0"
+
+# Common packages
+bat = "0.26.1"
+btop = "1.4.5"
+fzf = "0.67.0"
+jq = "1.8.1"
+yq = "4.50.1"
+
+# Python
+uv = "0.9.21"
+"pipx:yt-dlp" = "2025.12.8"
+
+# Go packages
+go = "1.25.5"
+"go:github.com/charmbracelet/gum" = "0.17.0"
