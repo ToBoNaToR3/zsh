@@ -1,5 +1,4 @@
-# Source necessary configurations for omz and antidote
-[[ -f "$HOME/.zshrc" ]] && source "$HOME/.zshrc"
+#!/usr/bin/env bash
 
 headline() {
   gum style --bold --foreground 2 "$1"
@@ -24,20 +23,20 @@ update_snaps() {
 
 update_zsh() {
   headline "Updating zsh repo"
-  git -C $ZSH_FOLDER stash
-  git -C $ZSH_FOLDER pull
+  git -C "$ZSH_FOLDER" stash
+  git -C "$ZSH_FOLDER" pull
   echo
 }
 
 update_omz() {
   headline "Updating ohmyzsh"
-  omz update
+  zsh -i -c "omz update"
   echo
 }
 
 update_antidote() {
   headline "Updating antidote plugins"
-  antidote update
+  zsh -i -c "antidote update"
   echo
 }
 
