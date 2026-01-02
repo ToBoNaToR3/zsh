@@ -13,7 +13,7 @@ bash install.sh
 
 ## Install fonts for powerlevel10k
 
-https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#manual-font-installation
+<https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#manual-font-installation>
 
 ## Reconfigure powerlevel10k
 

@@ -3,8 +3,9 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y sudo bash fontconfig && \
-    apt-get clean
+    apt-get install -y --no-install-recommends sudo bash fontconfig && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 ARG USERNAME=zsh-user
 

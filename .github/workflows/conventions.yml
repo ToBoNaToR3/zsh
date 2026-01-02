@@ -1,0 +1,31 @@
+name: Lint conventions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  commitlint:
+    if: github.event_name == 'pull_request'
+    name: Conventional Commitlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Install commitlint
+        run: npm install -g commitlint@v20.3.0
+
+      - name: Run commitlint
+        run: commitlint --verbose --from ${{ github.event.pull_request.base.sha }} --to ${{ github.sha }}
