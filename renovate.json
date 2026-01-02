@@ -4,6 +4,7 @@
   "minimumReleaseAge": "1 day",
   "timezone": "Europe/Berlin",
   "schedule": ["before 6am"],
+  "automerge": true,
   "packageRules": [
     {
       "description": "Disable auto-merge for major updates",
