@@ -1,25 +1,27 @@
 FROM ubuntu:24.04
 
+ARG USERNAME=zsh-user
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends sudo bash fontconfig && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends \
+        bash \
+        fontconfig \
+        sudo \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-ARG USERNAME=zsh-user
-
-RUN useradd -m -s /bin/bash $USERNAME && \
-    usermod -aG sudo $USERNAME && \
-    passwd -d $USERNAME  # Delete the password for the user
-
-COPY . /home/$USERNAME/zsh
-RUN chown -R $USERNAME:$USERNAME /home/$USERNAME/zsh && \
-    chmod +x /home/$USERNAME/zsh/install.sh
+RUN useradd -m -s /bin/bash "$USERNAME" \
+    && usermod -aG sudo "$USERNAME" \
+    && passwd -d "$USERNAME"
 
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-RUN /home/$USERNAME/zsh/install.sh
+COPY --chown=$USERNAME:$USERNAME . /home/$USERNAME/zsh
+
+RUN chmod +x /home/$USERNAME/zsh/install.sh \
+    && /home/$USERNAME/zsh/install.sh
 
 CMD ["zsh"]
