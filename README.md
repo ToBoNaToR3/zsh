@@ -30,5 +30,13 @@ echo -e "\xee\x82\xa0"
 ## Use the development container
 
 ```bash
-docker build -t zsh-test . && docker run -it zsh-test
+docker build -t zsh-test .
+docker run -it zsh-test
+```
+
+Mise tools are not installed automatically.
+To install them, run the folloowing command in the container shell:
+
+```bash
+mise install
 ```
