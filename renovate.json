@@ -3,5 +3,34 @@
   "extends": ["config:best-practices"],
   "minimumReleaseAge": "1 day",
   "timezone": "Europe/Berlin",
-  "schedule": ["before 6am"]
+  "schedule": ["before 6am"],
+  "packageRules": [
+    {
+      "description": "Disable auto-merge for major updates",
+      "automerge": false,
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "description": "Group all mise.toml tool updates",
+      "groupName": "Mise tools",
+      "matchManagers": ["mise"]
+    },
+    {
+      "description": "Pin digests and group digest updates",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pinDigest", "digest"],
+      "pinDigests": true,
+      "groupName": "Docker digest updates"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^\\.github/workflows/[^/]+\\.ya?ml$/"],
+      "matchStrings": [
+        "npm install -g (?<depName>[a-z0-9-]+)@v?(?<currentValue>[0-9.]+)"
+      ],
+      "datasourceTemplate": "npm"
+    }
+  ]
 }
