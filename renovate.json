@@ -9,19 +9,70 @@
     {
       "description": "Disable auto-merge for major updates",
       "automerge": false,
-      "matchUpdateTypes": ["major"]
+      "matchUpdateTypes": ["major", "replacement"]
     },
     {
-      "description": "Group all mise.toml tool updates",
+      "description": "Add renovate label to all updates by default",
+      "matchManagers": ["*"],
+      "addLabels": ["renovate"]
+    },
+    {
+      "description": "Label major updates",
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
+    },
+    {
+      "description": "Label minor updates",
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
+    },
+    {
+      "description": "Label patch updates",
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "addLabels": ["ci"]
+    },
+    {
+      "groupName": "Linters and formatters",
+      "matchPackageNames": [
+        "commitlint ",
+        "hadolint/hadolint-action",
+        "markdownlint-cli2",
+        "prettier"
+      ],
+      "addLabels": ["linters"]
+    },
+    {
       "groupName": "Mise tools",
-      "matchManagers": ["mise"]
+      "matchManagers": ["mise"],
+      "addLabels": ["mise"]
     },
     {
-      "description": "Pin digests and group digest updates",
+      "groupName": "Docker digest pins",
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pinDigest", "digest"],
+      "matchUpdateTypes": ["pinDigest"],
       "pinDigests": true,
-      "groupName": "Docker digest updates"
+      "addLabels": ["docker"]
+    },
+    {
+      "groupName": "Docker digest updates",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest"],
+      "pinDigests": true,
+      "addLabels": ["docker"]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchDatasources": ["github-actions"],
+      "addLabels": ["ci"]
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"]
     }
   ],
   "customManagers": [
