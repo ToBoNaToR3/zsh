@@ -16,9 +16,9 @@ jq = "1.8.1"
 yq = "4.50.1"
 
 # Python
-uv = "0.9.25"
+uv = "0.9.26"
 "pipx:yt-dlp" = "2025.12.8"
 
 # Go packages
-go = "1.25.5"
+go = "1.25.6"
 "go:github.com/charmbracelet/gum" = "0.17.0"
