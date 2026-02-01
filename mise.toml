@@ -6,14 +6,14 @@ npm.bun = true
 
 [tools]
 # Dependencies for mise
-usage = "2.16.0"
+usage = "2.16.1"
 
 # Common packages
 bat = "0.26.1"
 btop = "1.4.5"
 fzf = "0.67.0"
 jq = "1.8.1"
-yq = "4.50.1"
+yq = "4.52.2"
 
 # Python
 uv = "0.9.28"
