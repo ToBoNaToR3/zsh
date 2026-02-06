@@ -16,7 +16,7 @@ jq = "1.8.1"
 yq = "4.52.2"
 
 # Python
-uv = "0.9.30"
+uv = "0.10.0"
 "pipx:yt-dlp" = "2026.2.4"
 
 # Go packages
