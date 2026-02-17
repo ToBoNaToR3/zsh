@@ -6,7 +6,7 @@ npm.bun = true
 
 [tools]
 # Dependencies for mise
-usage = "2.16.2"
+usage = "2.17.0"
 
 # Common packages
 bat = "0.26.1"
@@ -16,7 +16,7 @@ jq = "1.8.1"
 yq = "4.52.4"
 
 # Python
-uv = "0.10.2"
+uv = "0.10.3"
 "pipx:yt-dlp" = "2026.2.4"
 
 # Go packages
