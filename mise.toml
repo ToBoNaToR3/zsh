@@ -17,7 +17,7 @@ yq = "4.52.4"
 
 # Python
 uv = "0.10.4"
-"pipx:yt-dlp" = "2026.2.4"
+"pipx:yt-dlp" = "2026.2.21"
 
 # Go packages
 go = "1.26.0"
