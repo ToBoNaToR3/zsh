@@ -20,5 +20,5 @@ uv = "0.10.8"
 "pipx:yt-dlp" = "2026.3.3"
 
 # Go packages
-go = "1.26.0"
+go = "1.26.1"
 "go:github.com/charmbracelet/gum" = "0.17.0"
