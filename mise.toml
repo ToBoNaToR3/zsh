@@ -6,7 +6,7 @@ npm.bun = true
 
 [tools]
 # Dependencies for mise
-usage = "3.2.0"
+usage = "3.2.1"
 
 # Common packages
 bat = "0.26.1"
