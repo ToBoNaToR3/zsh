@@ -10,13 +10,13 @@ usage = "3.2.1"
 
 # Common packages
 bat = "0.26.1"
-btop = "1.4.5"
-fzf = "0.67.0"
+btop = "1.4.6"
+fzf = "0.72.0"
 jq = "1.8.1"
 yq = "4.53.2"
 
 # Python
-uv = "0.11.7"
+uv = "0.11.8"
 "pipx:yt-dlp" = "2026.3.17"
 
 # Go packages
